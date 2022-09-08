@@ -1,2 +1,0 @@
-# localhostlog
-localhost log 
