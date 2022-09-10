@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/spectre.min.css">
     <link rel="stylesheet" href="css/spectre-exp.min.css">
     <link rel="stylesheet" href="css/spectre-icons.min.css">
@@ -22,7 +23,7 @@
                 <div class="tile tile-centered">
                     <div class="tile-content">
                         <div class="h3">127.0.0.1</div>
-                        <div class="tile-subtitle text-gray">localhos log </div>
+                        <div class="tile-subtitle text-gray">localhost log </div>
                     </div>
                 </div>
             </div>
@@ -33,17 +34,18 @@
             </div>
             <ul class="step">
                 <li class="step-item">
-                    <a href="#">1831: <i class="fa-solid fa-bolt-lightning"></i> </a>
+                    <a href="#"><i class="fa-solid fa-bolt-lightning"></i> </a>
                 </li>
                 <li class="step-item">
-                    <a href="#">1969: <i class="fa-brands fa-space-awesome"></i></a>
+                    <a href="#"><i class="fa-brands fa-space-awesome"></i></a>
                 </li>
-                <li class="step-item active"><a href="#">1970: <i class="fa-brands fa-linux"></i></a></li>
+                <li class="step-item"><a href="#"><i class="fa-brands fa-linux"></i></a></li>
+
                 <li class="step-item">
-                    <a href="#"></a>
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
                 </li>
-                <li class="step-item">
-                    <a href="#"></a>
+                <li class="step-item active">
+                    <a href="#"><i class="fa-brands fa-square-js"></i></a>
                 </li>
             </ul>
         </div>
@@ -61,18 +63,22 @@
                 </div>
                 <div class="column col-9 col-sm-12 col-xs-12">
                     <div class="card-header">
-                        <div class="card-title h5">Spred operator shallow copy</div>
-                        <pre><code class="language-js">
-                            const user = { name: 'Raj', location: { city: 'NY', state: 'NY' } };
-                            const copy = Object.assign({}, user); // OR // const copy = { ...user }; 
-                            
-                            copy.location.city = 'Albany';
-                            console.log('original: ', user.location); console.log('copy:', copy.location);
+                        <div class="card-title h5">Clone object with spread operator <code>syntax (...) </code> </div>
+                        <pre><code class="language-js"> 
+ const obj = { foo: 'bar', x: 1 };
+const objCopy = {...obj };
+// Object { foo: 'bar', x: 1 }
                         </code></pre>
-                        <div class="card-subtitle"> Predict the output of the below code.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
-
+                        <div class="card-subtitle">
+                            <p>The spread operator
+                                <code> (...) </code>can be used to merge two objects.
+                            </p>
+                            <pre><code class="language-js"> 
+const obj1 = { foo: 'bar', x: 1 };
+const obj2 = { waldo: 'baz', y: 2 };
+const mergedObj = { ...obj1, ...obj2 };
+// Object { foo: 'bar', x: 1, waldo: 'baz', y: 2 }
+                        </code></pre> Read more to see some tricky job interview questions, can you predict the output?...
                         </div>
                     </div>
                 </div>
@@ -84,9 +90,29 @@
                             <i class="icon icon-arrow-right mr-1"></i>
                             <mark>Read more...</mark>
                         </label>
+                        <div class="container" style="height: 3em;"></div>
                         <div class="accordion-body mr-1 ml-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            Try to predict the output of the following code..
+                            <hr>
+                            <code class="language-js"><pre>
+const obj1 = { foo: 'bar', baz: {x:1, y:1}}; 
+const obj2 = { ...obj1 };
+obj2.baz.x = 2;
+console.log('original: ', obj1.baz);
+console.log('copy:', obj2.baz);
+</pre></code> The output will be
+                            <code class="language-js"><pre>
+original: { x: 2, y: 1 }
+copy: { x: 2, y: 1 }</pre></code>Spread <code>...</code>  operator, perform a shallow copy. Properties that hold primitive values <code>'foo'</code>  in this example will be copied by value.
+                            <code> obj1</code> and
+                            <code>obj2</code> will receive their own copy of the
+                            <code>foo</code> property. Changing
+                            <code>obj2.foo</code> will not affect
+                            <code>obj1.foo</code>. But it works differently for properties of type Object
+                            <code>baz: {x:1, y: 1}</code> in this example. Objects in JavaScript are copied by reference. Meaning
+                            <code>obj1.baz</code> and
+                            <code> obj2.baz</code> both hold just a reference that points to the same place in memory where a single copy of
+                            <code> baz</code> exists.
                         </div>
                     </div>
                 </div>
@@ -99,48 +125,6 @@
         </div>
         <div class="bar bar-sm">
             <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <div class="card">
-            <div class="columns">
-                <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
-                    <div class="card-image">
-                        <img src="img/js.png" class="img-responsive img-fit-contain">
-                    </div>
-                </div>
-                <div class="column col-9 col-sm-12 col-xs-12">
-                    <div class="card-header">
-                        <div class="card-title h5">Spred operator shallow copy</div>
-                        <pre><code class="language-js">
-                            const user = { name: 'Raj', location: { city: 'NY', state: 'NY' } };
-                            const copy = Object.assign({}, user); // OR // const copy = { ...user }; 
-                            
-                            copy.location.city = 'Albany';
-                            console.log('original: ', user.location); console.log('copy:', copy.location);
-                        </code></pre>
-                        <div class="card-subtitle"> Predict the output of the below code.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                            mollit anim id est laborum.
-
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <!-- standard Accordions example -->
-                    <div class="accordion">
-                        <input type="checkbox" id="article-2" name="accordion-checkbox" hidden>
-                        <label class="accordion-header" for="article-2">
-                            <i class="icon icon-arrow-right mr-1"></i>
-                            <mark>Read more...</mark>
-                        </label>
-                        <div class="accordion-body mr-1 ml-1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                </div>
-            </div>
         </div>
         <div class="container" style="height: 1em;">
         </div>
