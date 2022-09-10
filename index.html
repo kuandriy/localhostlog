@@ -95,11 +95,12 @@ const mergedObj = { ...obj1, ...obj2 };
                             Try to predict the output of the following code..
                             <hr>
                             <code class="language-js"><pre>
-const obj1 = { foo: 'bar', baz: {x:1, y:1}}; 
+const obj1 = { foo: 'bar', 
+               baz: {x:1, y:1}}; 
 const obj2 = { ...obj1 };
 obj2.baz.x = 2;
-console.log('original: ', obj1.baz);
-console.log('copy:', obj2.baz);
+console.log('original:',obj1.baz);
+console.log('copy:',obj2.baz);
 </pre></code> The output will be
                             <code class="language-js"><pre>
 original: { x: 2, y: 1 }
