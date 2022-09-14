@@ -29,7 +29,7 @@
             </div>
             <div class="column col-4">
                 <em> <i class="fa-regular fa-envelope"></i> andriy
-                <i class="fa-solid fa-at"></i> localhostlog.com
+                    <i class="fa-solid fa-at"></i> localhostlog.com
                 </em>
             </div>
             <ul class="step">
@@ -52,7 +52,95 @@
         <div class="container" style="height: 1em;">
         </div>
         <div class="bar bar-sm">
-            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <div class="card">
+            <div class="columns">
+                <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
+                    <div class="card-image">
+                        <img src="img/ms.jpg" class="img-responsive img-fit-contain">
+                    </div>
+                </div>
+                <div class="column col-9 col-sm-12 col-xs-12">
+                    <div class="card-header">
+                        <div class="card-title h5 m-2">Microservices architecture
+                        </div>
+                        <cite>Microservice</cite> is an <cite>API</cite> with a well-defined interface that encapsulates business logic implementation. 
+                         Each <cite>Microservice</cite> implements part of the whole application. Example: <code>Authentication</code> service responsible for user <cite>registration, login, forget the password, etc...</cite> <code>Authentication</code> service may not have <cite>notification functionalit</cite> implemented. 
+                        In case, the <coe>Authentication</code> service needs to send a confirmation email.  It will prepare a message and send it as part of the <code>HTTP</code> request to the <code>Notification</code> <cite>Microservice.</cite> 
+                         Each <cite>Microservice</cite>is responsible for its own security, payload/ model validation, error handling, and persistent data operations.
+                        <cite>Microservice</cite> work with dedicated <code>DBs.</code>  For example, access to <code>USER</code> data is allowed only through the <code>USER</code> <cite>Microservice</cite>.  And <code>USER DB</code> contains only data required for <code>USER</code> <cite>Microservice</cite> operations.
+                        <div class="card-subtitle">
+                            <hr> Some Microservice Architecture benefits are:
+                            <ul>
+                                <li> Improved Scalability <i class="fa-solid fa-network-wired"></i></li>
+                                <li> Fault Isolation </li>
+                                <li> Programming Language and Technology Agnostic </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="accordion">
+                    <input type="checkbox" id="article-3" name="accordion-checkbox" hidden>
+                    <label class="accordion-header" for="article-3">
+                        <i class="icon icon-arrow-right mr-1"></i>
+                        <mark>Read more...</mark>
+                    </label>
+                    <div class="container" style="height: 3em;"></div>
+                    <div class="accordion-body mr-1 ml-1">
+                        <p>
+                        <h6 class="label">Benefits of Microservices Architecture</h6>
+                        </p>
+                        <div class="divider"></div>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        A smaller codebase allows easier reading and understanding of code. Each service can be implemented using an independent technology stack. No programming language or DB dependencies on the application level. Use the programming language and DB of choice that best fits the purpose of the Microservice.
+                                        <i class="fa-solid fa-code"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Microservice can be scaled independently. Scale only Microservices that no longer have the capacity to serve the traffic, it is a more cost-effective scale approach. 
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Microservice has fewer dependencies, it helps with the unit and integration testing. <i
+                                        class="fa-solid fa-flask"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Microservices allow smaller and faster deployments. Each Microservice is built and deployed as a separate process. No need to rebuild and redeploy the whole application.
+                                        <i class="fa-solid fa-gauge"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Fault Isolation. If one Microservice fails, the rest of the application quite possibly will continue to operate and services not related to the crashed Microservice continue to be available.
+                                        <i class="fa-solid fa-server"></i>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </br>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+        <div class="container" style="height: 3em;">
+        </div>
+        <div class="bar bar-sm">
+            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <div class="container" style="height: 1em;">
         </div>
         <div class="card">
             <div class="columns">
@@ -63,9 +151,10 @@
                 </div>
                 <div class="column col-9 col-sm-12 col-xs-12">
                     <div class="card-header">
-                        <div class="card-title h5">What is CI/CD pipeline?</code>
+                        <div class="card-title h5 m-2">What is CI/CD pipeline?
                         </div>
-                        <code> CI/CD</code> pipeline is a sequence of programming jobs that implements continuous integration, delivery, and deployment of the software project. This process is a part of
+                        <code> CI/CD</code> pipeline is a sequence of programming jobs that implements continuous
+                        integration, delivery, and deployment of the software project. This process is a part of
                         <code> SDLC</code> the system/software development life cycle.
                         <div class="card-subtitle">
                             <hr>
@@ -78,7 +167,8 @@
                                     <div class="timeline-content">
                                         <span>Continues Integration</span>
                                         </br>
-                                        <span class=" bg-secondary">Merge code change to the git repo. Run build and integration test.</span>
+                                        <span class=" bg-secondary">Merge code change to the git repo. Run build and
+                                            integration test.</span>
                                     </div>
                                 </div>
 
@@ -105,7 +195,8 @@
                                     <div class="timeline-content">
                                         <span>Continues Deployment</span>
                                         </br>
-                                        <span class=" bg-secondary">Automates the process of Continues Delivery, deploying applications automatically without human interaction</span>
+                                        <span class=" bg-secondary">Automates the process of Continues Delivery,
+                                            deploying applications automatically without human interaction</span>
                                     </div>
                                 </div>
                                 ...
@@ -122,20 +213,25 @@
                             <mark>Read more...</mark>
                         </label>
                         <div class="container" style="height: 3em;"></div>
-                        <div class="accordion-body mr-1 ml-1 text-center">
-                            <h6 class="label">Software development process demonstrating CI/CD pipeline steps.</h6>
+                        <div class="accordion-body mr-1 ml-1">
+                            <div class="text-center">
+                                <h6 class="label">Software development process demonstrating CI/CD pipeline steps.</h6>
+                            </div>
+                            <div class="divider"></div>
                             <ul class="step">
                                 <li class="step-item">
                                     <a href="#"> <i class="fa-solid fa-code-branch"></i> Clone git repo </a>
                                 </li>
                                 <li class=" step-item">
-                                    <a href="#"><i class="fa-solid fa-code-merge"></i> Create a feature branch to implement code changes</a>
+                                    <a href="#"><i class="fa-solid fa-code-merge"></i> Create a feature branch to
+                                        implement code changes</a>
                                 </li>
                                 <li class="step-item">
                                     <a href="#"><i class="fa-solid fa-terminal"></i> Implement codding task </a>
                                 </li>
                                 <li class="step-item">
-                                    <a href="#"><i class="fa-solid fa-code-pull-request"></i>  Pull Request to merge code change to the main repo</a>
+                                    <a href="#"><i class="fa-solid fa-code-pull-request"></i>  Pull Request to merge
+                                        code change to the main repo</a>
                                 </li>
                             </ul>
                             <ul class="step">
@@ -143,7 +239,8 @@
                                     <a href="#"><i class="fa-solid fa-thumbs-up"></i> Code review and approval</a>
                                 </li>
                                 <li class="step-item">
-                                    <a href="#"><i class="fa-solid fa-box"></i> Build, compile source code to executable package</a>
+                                    <a href="#"><i class="fa-solid fa-box"></i> Build, compile source code to executable
+                                        package</a>
                                 </li>
                                 <li class="step-item">
                                     <a href=" #"><i class="fa-solid fa-list-check"></i>  Unit and integration test</a>
@@ -163,7 +260,8 @@
         <div class="container" style="height: 3em;">
         </div>
         <div class="bar bar-sm">
-            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
         </div>
         <div class="container" style="height: 1em;">
         </div>
@@ -191,7 +289,8 @@ const obj1 = { foo: 'bar', x: 1 };
 const obj2 = { waldo: 'baz', y: 2 };
 const mergedObj = { ...obj1, ...obj2 };
 // Object { foo: 'bar', x: 1, waldo: 'baz', y: 2 }
-                        </code></pre> Read more to see some tricky job interview questions, can you predict the output?...
+                        </code></pre> Read more to see some tricky job interview questions, can you predict the
+                            output?...
                         </div>
                     </div>
                 </div>
@@ -217,15 +316,18 @@ console.log('copy:',obj2.baz);
 </pre></code> The output will be
                             <code class="language-js"><pre>
 original: { x: 2, y: 1 }
-copy: { x: 2, y: 1 }</pre></code>Spread <code>...</code>  operator, perform a shallow copy. Properties that hold primitive values <code>'foo'</code>  in this example will be copied by value.
+copy: { x: 2, y: 1 }</pre></code>Spread <code>...</code>  operator, perform a shallow copy. Properties that hold
+                            primitive values <code>'foo'</code>  in this example will be copied by value.
                             <code> obj1</code> and
                             <code>obj2</code> will receive their own copy of the
                             <code>foo</code> property. Changing
                             <code>obj2.foo</code> will not affect
                             <code>obj1.foo</code>. But it works differently for properties of type Object
-                            <code>baz: {x:1, y: 1}</code> in this example. Objects in JavaScript are copied by reference. Meaning
+                            <code>baz: {x:1, y: 1}</code> in this example. Objects in JavaScript are copied by
+                            reference. Meaning
                             <code>obj1.baz</code> and
-                            <code> obj2.baz</code> both hold just a reference that points to the same place in memory where a single copy of
+                            <code> obj2.baz</code> both hold just a reference that points to the same place in memory
+                            where a single copy of
                             <code> baz</code> exists.
                         </div>
                     </div>
@@ -252,5 +354,7 @@ copy: { x: 2, y: 1 }</pre></code>Spread <code>...</code>  operator, perform a 
         </div>
     </div>
 </body>
+
+</html>
 
 </html>
