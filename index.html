@@ -55,6 +55,147 @@
             <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
                 aria-valuemax="100"></div>
         </div>
+        <!-- Nodejs Asynchronous section -->
+        <div class="card">
+            <div class="columns">
+                <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
+                    <div class="card-image">
+                        <img src="img/nodejs.png" class="img-responsive img-fit-contain">
+                    </div>
+                </div>
+                <div class="column col-9 col-sm-12 col-xs-12">
+                    <div class="card-header">
+                        <div class="card-title h5 m-2"> Single-threaded non-blocking and asynchronous <em>NodeJS</em>
+                        </div>
+                        Node<i class="fa-brands fa-node-js"></i> often described as single-threaded, non-blocking asynchronous runtime environment.
+                        <ul>
+                            <li>
+                        <em>Single-threaded</em>: designed to execute just one task at a time. A task has a beginning, execution sequence, and end. From beginning to end, the task must be executed without interruption. And the next task can be started only after the previously finished execution.
+                        
+                    
+                        <ul class="step">
+                            <li class="step-item">
+                                <a href="#"> <i class="fa-solid fa-play"></i> task start </a>
+                            </li>
+                            <li class=" step-item">
+                                <a href="#"><i class="fa-solid fa-code"></i> step 1</a>
+                            </li>
+                            <li class="step-item">
+                                <a href="#"> <i class="fa-solid fa-code"></i> step 2</a>
+                            </li>
+                            <li class="step-item">
+                                <a href="#"><i class="fa-solid fa-flag-checkered"></i> end</a>
+                            </li>
+                            <li class="step-item">
+                                <a href="#"><i class="fa-solid fa-arrow-rotate-left"></i> Next task</a>
+                            </li>
+                        </ul>
+                    <hr>
+                    </li>
+                        
+                    <li><em>Asynchronous</em>, on the other hand, is a programming technique that allows starting a long-running task and while it still running continuing with the next task. Once the first task finish execution, your program proceeds with the task result. An example save to DB operation can be executed Asynchronously, so the API can continue to respond to another request. Once the save data operation is finished, we continue with the DB response.
+                        <ul >
+                            <li class="text-primary">
+                               <i class="fa-solid fa-play"></i> task 1 start 
+                            </li>
+                            <li class="text-primary">
+                               <i class="fa-solid fa-code"></i> step 1 <span class="text-warning">Asynchronous call </span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-arrow-rotate-left"></i> Next task
+                            </li>
+                            <li class="text-success">
+                                <i class="fa-solid fa-play"></i> task 2 start 
+                            </li>
+                            <li class="text-success">
+                                <i class="fa-solid fa-code"></i> step 1
+                            </li>
+                            <li class="text-success">
+                                <i class="fa-solid fa-code"></i> step 2
+                            </li>
+                            <li class="text-success">
+                                <i class="fa-solid fa-flag-checkered"></i> task 2 end
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-arrow-rotate-left"></i> <span class="text-primary">Task 1 step 1</span><span class="text-warning">callback </span> 
+                            </li>
+                            <li class="text-primary">
+                               <i class="fa-solid fa-code"></i> task 1 step 2
+                            </li>
+                            <li class="text-primary">
+                                <i class="fa-solid fa-flag-checkered"></i> task 1 end
+                            </li>
+                        </ul>    
+                    </li>
+                        <div class="card-subtitle">
+                            <hr> 
+                           <span class="bg-gray"> How is Node<i class="fa-brands fa-node-js"></i> single-threaded and Asynchronous at the same time?</span><br>
+                            <em>JavaScript</em> is a single-threaded programming language, but the <cite>JavaScript</cite> Engine <i class="fa-brands fa-js"></i> is just one part of NodeJS</i>. For support of Asynchronous operations, NodeJS depends on the thread pool provided by 
+                            <span class="bg-secondary text-bold"> libuv </span>  library...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="accordion">
+                    <input type="checkbox" id="article-4" name="accordion-checkbox" hidden>
+                    <label class="accordion-header" for="article-4">
+                        <i class="icon icon-arrow-right mr-1"></i>
+                        <mark>Read more...</mark>
+                    </label>
+                    <div class="container" style="height: 3em;"></div>
+                    <div class="accordion-body mr-1 ml-1">
+                        <span class="bg-gray">Some libraries that NodeJS depends on: </span>
+                        <ul>
+                            <li> <span class="bg-secondary text-bold">V8</span> Compiles and executes JavaScript source code, used in Chrome web browser  as well <i class="fa-brands fa-js"></i> </li>
+                            <li> <span class="bg-secondary text-bold">libuv</span> is a multi-platform support library with a focus on asynchronous I/O. It was primarily developed for use by Node<i class="fa-brands fa-node-js"></i> </li>
+                            <li> <span class="bg-secondary text-bold">llhttp</span> lightweight TypeScript and C library that handles HTTP parsing</li>
+                        </ul>
+                            <p><h6 class="label">How NodeJS supports asynchronous tasks?</h6><br>
+                            <cite>- Using  <i class="fa-solid fa-arrow-rotate-left"></i> Event Loop, <i class="fa-solid fa-bars"></i> Event Queue, and <i class="fa-solid fa-list-ol"></i> Thread Pool</cite>
+                            </p>
+                        <div class="divider"></div>
+                        <p>To support <em>Asynchronous</em> operations. NodeJS implements <i class="fa-solid fa-arrow-rotate-left"> </i>Event Loop. </i> Event loop is an endless loop looking for the next task in a JavaScript call stack. <i class="fa-solid fa-list-check"></i> If the call stack is empty, the Event loop will check the Event queue. <br><i class="fa-solid fa-bars"></i> The event queue is the place where callsback functions waiting to be executed. <br>
+                        <i class="fa-solid fa-list-ol"></i> The Thread pool is the <span class="bg-secondary text-bold">libuv</span> pool of 4 threads that NodeJS</i> can use to delegate heavy operations like DB connect. </p>If we look at a complete example. NodeJS delegates connect to DB to <span class="bg-secondary text-bold">libuv</span> asking to use one of the available threads from the <i class="fa-solid fa-list-ol"></i> Thread pool.
+                         At the end of the operation, a callback is pushed to the <i class="fa-solid fa-bars"></i> event queue.  Once the <i class="fa-solid fa-list-check"></i> call stack is empty, the <i class="fa-solid fa-arrow-rotate-left"></i> event loop will pick up the callback function from the event queue and continue execution.</br>
+                         <hr>
+                         <p>
+                         <ul class="step">
+                            <li class="step-item">
+                                <a href="#"> Node<i class="fa-brands fa-node-js"> </i></a>
+                            </li>
+                            <li class=" step-item">
+                                <a href="#"><i class="fa-solid fa-list-ol"></i> Thread Pool </a>
+                            </li>
+                            <li class="step-item">
+                                <a href="#"> <i class="fa-solid fa-bars"></i> Event Queue</a>
+                            </li>
+                            <li class="step-item">
+                                <a href="#"> <i class="fa-solid fa-arrow-rotate-left"></i> Event Loop</a>
+                            </li>
+                            <li class="step-item">
+                                <a href="#"><i class="fa-solid fa-list-check"></i> Call Stack </a>
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">  
+            </div>
+        </div>
+        <div class="container" style="height: 3em;">
+        </div>
+        <div class="bar bar-sm">
+            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <div class="container" style="height: 1em;">
+        </div>
+    
+        
+        <!-- Microservice section -->
+
         <div class="card">
             <div class="columns">
                 <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
