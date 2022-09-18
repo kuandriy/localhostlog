@@ -67,35 +67,29 @@
                 </div>
                 <div class="column col-9 col-sm-12 col-xs-12">
                     <div class="card-header">
-                        <div class="card-title h5">Javascript ES6 Destructuring assignment </div>
-                        Destructural assigment is ES6 Javascript expression that assigns Array items or object
-                        properties to an a individual variables.
-
+                        <div class="card-title h5">JavaScript ES6 Destructuring assignment</div>
+                        <em>Destructuring assignment</em> is an ES6 JavaScript <i class="fa-brands fa-js"> </i> expression that assigns <em> Array</em> items or <em>Object</em> properties to individual variables.
                         <div class="card-subtitle">
-                            <p>The spread operator
-                            <h6> Array distruturing syntax examle</h6>
+                            <p>
+                            <h6> Array destructuring <em>syntax</em></h6>
                             </p>
                             <pre><code class="language-js"> 
                                 const arr = [ 'foo', 'bar'];
                                 const [first, second] = arr;
-                                console.log(first);
-                                // Output: foo
-                                console.log(second);
-                                // Output: bar
-                        </code></pre> On left side we using square bracets to define variables, values from array get
-                            assigned to the variabels in the same order;
-                            We can skip aray irem with extra coma.
+                                console.log(first); // Output: foo
+                                console.log(second); // Output: bar
+                        </code></pre>
+                        <hr>
+                        On the left side, we use square brackets to define variables. Values from the array get assigned to the variables in the same order. We can skip array items with an extra comma.
                             <pre><code class="language-js"> 
                             const arr = [ 'foo', 'bar', 'baz'];
                             const [first, ,second] = arr; // extra coma
-                            console.log(first);
-                            // Output: foo
-                            console.log(second);
-                            // Output: baz 
+                            console.log(first); // Output: foo
+                            console.log(second); // Output: baz 
                             // bar skiped 
                     </code></pre>
-                            Simmilary to Arrays, Javascript allows objects destructuring, using curley insted square
-                            bracets
+                    <hr>
+                    Similar to <em>Arrays</em>, JavaScript allows<em> Object</em> destructuring, using curly instead of square brackets.
                             <pre><code class="language-js"> 
                         const obj = {x: 'foo', y: 'bar', z: 'baz'};
                         const {x, y ,z} = obj; 
@@ -106,6 +100,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="column col-12 col-sm-12 col-xs-12">
                 <div class="card-body">
                     <!-- standard Accordions example -->
                     <div class="accordion">
@@ -116,49 +111,44 @@
                         </label>
                         <div class="container" style="height: 1em;"></div>
                         <div class="accordion-body mr-1 ml-1">
-                            Object properties values will be assigned to coresponding variable on the left side.
-                            Name of the variable must match object property name const x = obj.x but order in witch
-                            variables defined onthe left side does not metter
+                            <hr>
+                            Object property values will be assigned to the corresponding variable on the left side. The name of the variable must match the object property name, but the order in which variables are defined on the left side does not matter. 
+                            The following will work as well.
                             <pre><code class="language-js"> 
-                            // Fallowing will work as weell 
                             const obj = {x: 'foo', y: 'bar', z: 'baz'};
-                            const {z, y ,x} = obj; // order chsnged
+                            const {z, y ,x} = obj; // order changed
                             console.log(x); // Output: foo
                             console.log(y); // Output: bar
                             console.log(z); // Output: baz
                     </code></pre>
-                            To overcome variable name dependencies we can use aliases.
+                    <hr>
+                    To overcome variable name dependencies, we can use <code>aliases</code>.
                             <pre><code class="language-js"> 
-                        const obj = {x: 'foo', y: 'bar', z: 'baz'};
-                        const {z, y: yAlias ,x} = obj; // yAlias
+                        const obj = {x: 'foo', y: 'bar'};
+                        const {y: yAlias ,x} = obj; // yAlias
                         console.log(x); // Output: foo
                         console.log(yAlias); // Output: bar
-                        console.log(z); // Output: baz
                 </code></pre>
-                            Destructured assigment allows to have default values. In fallowing example // y and z have
-                            default values
-
+                <hr>
+                Destructuring assignment allows having default values. In the following example,  <mark>y</mark> and <mark>z</mark> are defined with default values. <code> y = 'garply', z = 'waldo' </code>
                             <pre><code class="language-js"> 
                    const obj = {x: 'foo', y: 'bar'};
                    const {x, y = 'garply', z = 'waldo'} = obj; 
                    console.log(x); // Output: foo
-                   console.log(y); 
-                   // Output: bar, value from object  
-                   console.log(z); 
-                   // Output: waldo, default value 
+                   console.log(y); // Output: bar, value from object  
+                   console.log(z); // Output: waldo, default value 
            </code></pre>
-                            What if object has extra properties or array is longer then number of variables defined on
-                            the left single-threaded We can end list of variables ...rest to store or remaining
-                            properties to rest object;
+           </div>
+           <div class="accordion-body mr-1 ml-1">
+           <hr>
+           What if the <em>Object</em> has extra properties or the <em>Array</em> is longer than the number of variables defined on the left side? We can end the list of variables <code>...rest</code> to store remaining properties to rest object.
                             <pre><code class="language-js"> 
               const obj = {x: 'foo', y: 'bar', z: 'baz'};
               const {x, ...others} = obj; 
-              console.log(x); 
-              // Output: foo
-              console.log(others); 
-              // Output: { y: 'bar', z: 'baz' }
+              console.log(x);  // Output: foo
+              console.log(others);  // Output: { y: 'bar', z: 'baz' }
       </code></pre>
-
+</div>
                         </div>
                     </div>
                 </div>
