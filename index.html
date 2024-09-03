@@ -55,7 +55,76 @@
             <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
                 aria-valuemax="100"></div>
         </div>
+        <div class="card" id="c7">
+            <div class="columns">
+                <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
+                    <div class="card-image">
+                        <img src="img/api.jpg" class="img-responsive img-fit-contain">
+                    </div>
+                </div>
+                <div class="column col-9 col-sm-12 col-xs-12">
+                    <div class="card-header">
+                        <div class="card-title h5">Protecting Your API from Common Vulnerabilities</div>
+                        <div class="card-subtitle">
+                            <br>
+                            <h6>Understanding API Security</h6>
+                            <ul>
+                                <li><em>APIs</em> are the backbone of modern web services, allowing different systems to communicate.</li>
+                                <li>However, they are also prime targets for attackers, making API security critical.</li>
+                                <li>Understanding common vulnerabilities and implementing protective measures is essential for safeguarding your APIs.</li>
+                            </ul>
+                            <hr>
+                            <h6>Common API Vulnerabilities</h6>
+                            APIs can be vulnerable to various attacks if not properly secured. Some common vulnerabilities include:
+                            <ul>
+                                <li><strong>Broken Authentication:</strong> Weak authentication mechanisms can allow unauthorized access to your API.</li>
+                                <li><strong>Excessive Data Exposure:</strong> APIs often return more data than necessary, exposing sensitive information.</li>
+                                <li><strong>Rate Limiting Issues:</strong> Lack of rate limiting can lead to denial of service attacks or excessive resource consumption.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-12 col-sm-12 col-xs-12">
+                    <div class="card-body">
+                        <div class="accordion">
+                            <input type="checkbox" id="article-7" name="accordion-checkbox" hidden>
+                            <label class="accordion-header" for="article-7">
+                                <i class="icon icon-arrow-right mr-1"></i>
+                                <mark>Read more...</mark>
+                            </label>
+                            <div class="container" style="height: 1em;"></div>
+                            <div class="accordion-body mr-1 ml-1">
+                                <hr>
+                                <h6>Practical Security Measures</h6>
+                                Implementing the following security practices can help protect your API from common vulnerabilities:
+                                <ul>
+                                    <li><strong>Strong Authentication:</strong> Use robust authentication mechanisms such as OAuth2 or JWT to ensure only authorized users can access your API.</li>
+                                    <li><strong>Input Validation:</strong> Validate all incoming data to prevent injection attacks, such as SQL injection or cross-site scripting (XSS).</li>
+                                    <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse and ensure fair usage of your API resources.</li>
+                                    <li><strong>Data Encryption:</strong> Encrypt sensitive data both in transit and at rest to protect it from unauthorized access.</li>
+                                </ul>
+                            </div>
+                            <div class="accordion-body mr-1 ml-1">
+                                <hr>
+                                <h6>Monitoring and Logging</h6>
+                                Continuously monitor and log API activities to detect and respond to suspicious behavior:
+                                <ul>
+                                    <li><strong>Set up Alerts:</strong> Configure alerts for unusual activity, such as multiple failed login attempts or high request rates.</li>
+                                    <li><strong>Regular Audits:</strong> Conduct regular security audits of your API to identify and address potential vulnerabilities.</li>
+                                    <li><strong>Use WAFs:</strong> Implement a Web Application Firewall (WAF) to filter and monitor HTTP requests to your API.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Typescript -->
+        <div class="bar bar-sm mt-2">
+            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
+                 aria-valuemax="100"></div>
+        </div>
         <div class="card" id="c6">
             <div class="columns">
                 <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
@@ -677,7 +746,7 @@
                 <div class="column col-9 col-sm-12 col-xs-12">
                     <div class="card-header">
                         <div class="card-title h5">Clone object with spread operator <code>syntax (...) </code> </div>
-                        <pre><code class="language-js"> 
+                        <pre><code class="language-js">
  const obj = { foo: 'bar', x: 1 };
 const objCopy = {...obj };
 // Object { foo: 'bar', x: 1 }
@@ -686,7 +755,7 @@ const objCopy = {...obj };
                             <p>The spread operator
                                 <code> (...) </code>can be used to merge two objects.
                             </p>
-                            <pre><code class="language-js"> 
+                            <pre><code class="language-js">
 const obj1 = { foo: 'bar', x: 1 };
 const obj2 = { waldo: 'baz', y: 2 };
 const mergedObj = { ...obj1, ...obj2 };
@@ -709,8 +778,8 @@ const mergedObj = { ...obj1, ...obj2 };
                             Try to predict the output of the following code..
                             <hr>
                             <code class="language-js"><pre>
-const obj1 = { foo: 'bar', 
-               baz: {x:1, y:1}}; 
+const obj1 = { foo: 'bar',
+               baz: {x:1, y:1}};
 const obj2 = { ...obj1 };
 obj2.baz.x = 2;
 console.log('original:',obj1.baz);
