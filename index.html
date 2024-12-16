@@ -51,6 +51,89 @@
         </div>
         <div class="container" style="height: 1em;">
         </div>
+
+        <!-- Domain-Driven Design section -->
+        <div class="bar bar-sm mt-2">
+            <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
+                aria-valuemax="100"></div>
+        </div>
+        <div class="card" id="c8">
+            <div class="columns">
+                <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
+                    <div class="card-image">
+                        <img src="img/DDD.png" class="img-responsive img-fit-contain">
+                    </div>
+                </div>
+                <div class="column col-9 col-sm-12 col-xs-12">
+                    <div class="card-header">
+                        <div class="card-title h5">Domain-Driven Design (DDD)</div>
+                        <div class="card-subtitle">
+                            <br>
+                            <h6>What is Domain-Driven Design?</h6>
+                            <ul>
+                                <li><em>Domain-Driven Design (DDD)</em> is a software development approach focusing on
+                                    modeling complex software solutions based on the business domain.</li>
+                                <li>DDD emphasizes collaboration between technical and domain experts to create a shared
+                                    understanding of the domain.</li>
+                                <li>It aims to align the software design with the business needs and goals.</li>
+                            </ul>
+                            <hr>
+                            <h6>Core Concepts of DDD</h6>
+                            DDD introduces several key concepts to model the domain effectively:
+                            <ul>
+                                <li><strong>Entities:</strong> Objects that have a distinct identity and lifecycle.</li>
+                                <li><strong>Value Objects:</strong> Immutable objects that describe aspects of the
+                                    domain without an identity.</li>
+                                <li><strong>Aggregates:</strong> A cluster of entities and value objects treated as a
+                                    single unit.</li>
+                                <li><strong>Repositories:</strong> Mechanisms for accessing and storing aggregates.</li>
+                                <li><strong>Services:</strong> Operations that do not naturally fit within entities or
+                                    value objects.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column col-12 col-sm-12 col-xs-12">
+                    <div class="card-body">
+                        <div class="accordion">
+                            <input type="checkbox" id="article-8" name="accordion-checkbox" hidden>
+                            <label class="accordion-header" for="article-8">
+                                <i class="icon icon-arrow-right mr-1"></i>
+                                <mark>Read more...</mark>
+                            </label>
+                            <div class="container" style="height: 1em;"></div>
+                            <div class="accordion-body mr-1 ml-1">
+                                <hr>
+                                <h6>Strategic Design</h6>
+                                DDD also includes strategic design principles to manage complexity:
+                                <ul>
+                                    <li><strong>Bounded Contexts:</strong> Explicit boundaries within which a particular
+                                        model is defined and applicable.</li>
+                                    <li><strong>Context Maps:</strong> Visual representations of the relationships
+                                        between bounded contexts.</li>
+                                    <li><strong>Ubiquitous Language:</strong> A common language used by all team members
+                                        to describe the domain.</li>
+                                </ul>
+                            </div>
+                            <div class="accordion-body mr-1 ml-1">
+                                <hr>
+                                <h6>Benefits of DDD</h6>
+                                Adopting DDD can provide several benefits:
+                                <ul>
+                                    <li><strong>Improved Communication:</strong> Enhances collaboration between
+                                        technical and domain experts.</li>
+                                    <li><strong>Better Alignment:</strong> Ensures the software design aligns with
+                                        business goals.</li>
+                                    <li><strong>Scalability:</strong> Facilitates managing complex domains and evolving
+                                        requirements.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="bar bar-sm mt-2">
             <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
                 aria-valuemax="100"></div>
@@ -69,17 +152,24 @@
                             <br>
                             <h6>Understanding API Security</h6>
                             <ul>
-                                <li><em>APIs</em> are the backbone of modern web services, allowing different systems to communicate.</li>
-                                <li>However, they are also prime targets for attackers, making API security critical.</li>
-                                <li>Understanding common vulnerabilities and implementing protective measures is essential for safeguarding your APIs.</li>
+                                <li><em>APIs</em> are the backbone of modern web services, allowing different systems to
+                                    communicate.</li>
+                                <li>However, they are also prime targets for attackers, making API security critical.
+                                </li>
+                                <li>Understanding common vulnerabilities and implementing protective measures is
+                                    essential for safeguarding your APIs.</li>
                             </ul>
                             <hr>
                             <h6>Common API Vulnerabilities</h6>
-                            APIs can be vulnerable to various attacks if not properly secured. Some common vulnerabilities include:
+                            APIs can be vulnerable to various attacks if not properly secured. Some common
+                            vulnerabilities include:
                             <ul>
-                                <li><strong>Broken Authentication:</strong> Weak authentication mechanisms can allow unauthorized access to your API.</li>
-                                <li><strong>Excessive Data Exposure:</strong> APIs often return more data than necessary, exposing sensitive information.</li>
-                                <li><strong>Rate Limiting Issues:</strong> Lack of rate limiting can lead to denial of service attacks or excessive resource consumption.</li>
+                                <li><strong>Broken Authentication:</strong> Weak authentication mechanisms can allow
+                                    unauthorized access to your API.</li>
+                                <li><strong>Excessive Data Exposure:</strong> APIs often return more data than
+                                    necessary, exposing sensitive information.</li>
+                                <li><strong>Rate Limiting Issues:</strong> Lack of rate limiting can lead to denial of
+                                    service attacks or excessive resource consumption.</li>
                             </ul>
                         </div>
                     </div>
@@ -96,22 +186,31 @@
                             <div class="accordion-body mr-1 ml-1">
                                 <hr>
                                 <h6>Practical Security Measures</h6>
-                                Implementing the following security practices can help protect your API from common vulnerabilities:
+                                Implementing the following security practices can help protect your API from common
+                                vulnerabilities:
                                 <ul>
-                                    <li><strong>Strong Authentication:</strong> Use robust authentication mechanisms such as OAuth2 or JWT to ensure only authorized users can access your API.</li>
-                                    <li><strong>Input Validation:</strong> Validate all incoming data to prevent injection attacks, such as SQL injection or cross-site scripting (XSS).</li>
-                                    <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse and ensure fair usage of your API resources.</li>
-                                    <li><strong>Data Encryption:</strong> Encrypt sensitive data both in transit and at rest to protect it from unauthorized access.</li>
+                                    <li><strong>Strong Authentication:</strong> Use robust authentication mechanisms
+                                        such as OAuth2 or JWT to ensure only authorized users can access your API.</li>
+                                    <li><strong>Input Validation:</strong> Validate all incoming data to prevent
+                                        injection attacks, such as SQL injection or cross-site scripting (XSS).</li>
+                                    <li><strong>Rate Limiting:</strong> Implement rate limiting to prevent abuse and
+                                        ensure fair usage of your API resources.</li>
+                                    <li><strong>Data Encryption:</strong> Encrypt sensitive data both in transit and at
+                                        rest to protect it from unauthorized access.</li>
                                 </ul>
                             </div>
                             <div class="accordion-body mr-1 ml-1">
                                 <hr>
                                 <h6>Monitoring and Logging</h6>
-                                Continuously monitor and log API activities to detect and respond to suspicious behavior:
+                                Continuously monitor and log API activities to detect and respond to suspicious
+                                behavior:
                                 <ul>
-                                    <li><strong>Set up Alerts:</strong> Configure alerts for unusual activity, such as multiple failed login attempts or high request rates.</li>
-                                    <li><strong>Regular Audits:</strong> Conduct regular security audits of your API to identify and address potential vulnerabilities.</li>
-                                    <li><strong>Use WAFs:</strong> Implement a Web Application Firewall (WAF) to filter and monitor HTTP requests to your API.</li>
+                                    <li><strong>Set up Alerts:</strong> Configure alerts for unusual activity, such as
+                                        multiple failed login attempts or high request rates.</li>
+                                    <li><strong>Regular Audits:</strong> Conduct regular security audits of your API to
+                                        identify and address potential vulnerabilities.</li>
+                                    <li><strong>Use WAFs:</strong> Implement a Web Application Firewall (WAF) to filter
+                                        and monitor HTTP requests to your API.</li>
                                 </ul>
                             </div>
                         </div>
@@ -123,7 +222,7 @@
         <!-- Typescript -->
         <div class="bar bar-sm mt-2">
             <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
-                 aria-valuemax="100"></div>
+                aria-valuemax="100"></div>
         </div>
         <div class="card" id="c6">
             <div class="columns">
@@ -347,7 +446,7 @@
             <div class="bar-item" role="progressbar" style="width:5%;" aria-valuenow="25" aria-valuemin="0"
                 aria-valuemax="100"></div>
         </div>
-                <!-- Nodejs Asynchronous section -->
+        <!-- Nodejs Asynchronous section -->
         <div class="card" id="c4">
             <div class="columns">
                 <div class="column col-3 col-sm-9 col-xs-9 col-mx-auto">
